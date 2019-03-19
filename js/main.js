@@ -86,8 +86,34 @@ $("a.nav-link").click(function () {
 
 $("a.nav-link").click(function (event) {
     event.preventDefault();
-});                                             //to prevent default behaviour of anchor tags, the #contact, #booking etc will disappear from the search bar/url
+});  
+                                           //to prevent default behaviour of anchor tags, the #contact, #booking etc will disappear from the search bar/url
+//gradual display of containers
+$(window).scroll(function(){
 
+    //zbavit se chyby kterou hlasi console, obalit to cele do ifu, jeden element neni hidden a hned to nascrollujeme dolu tak hlasilo chybu
+  if ($(".hidden").length > 0) {                                
+
+      var userPosition = $(window).scrollTop();
+      //console.log(aktualniPoziceUzivatele);
+      var elementPosition = $(".hidden").first().offset().top;
+      //console.log(poziceElementuVDokumentu);
+      var windowHeight = $(window).height();
+      //console.log(vyskaOkna);
+      var sectionHeight = $(".hidden").first().height();
+      //console.log(vyskaSekce);
+  
+      var vypocet = elementPosition + (sectionHeight/2);
+      //console.log("vypocet: " + vypocet);
+      var hranice = userPosition + windowHeight;
+      //console.log("hranice: " + hranice);
+      if (vypocet <= hranice) {                               //is half of the element visible already?
+          $(".hidden").first().removeClass("hidden");
+      } else if ((windowHeight/2) + userPosition >= elementPosition) {   //prekrocil element 1/2 stranky?
+          $(".hidden").first().removeClass("hidden");
+      }
+  }
+});
 
 // click on Top button to scroll up
 $("#backToTop").click(function () {
