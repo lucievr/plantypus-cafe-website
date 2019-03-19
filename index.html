@@ -22,17 +22,36 @@
 </head>
 
 <body>
-    <div class="ball"></div>
+    <!-- <div class="ball"></div> -->
+    <!-- Modal -->
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="mySmallModalLabel">Welcome to our page!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img class="gif" src="./img/platypus-dancing.gif" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close me</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <header>
     <section id="home">
         <div class="container-fluid">
             
             <nav class="navbar navbar-expand-lg navbar-light sticky">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#" data-toggle="modal" data-target=".bd-example-modal-sm">
                     <img src="./img/platypus.png" width="30" height="30" class="d-inline-block align-top" alt="">
                     <span>plantypus</span>
                 </a>
-
+          
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -61,12 +80,33 @@
     <section id="menu" class="color-section">
         <div class="container-fluid hidden">
             <h1>Menu</h1>
-            <h2>Breakfast</h2>
+            <h2>breakfast</h2>
             <div class="vegas-container breakfast"></div>
-            <h2>Lunch & Snacks</h2>
+            <ul class="menu-items"> 
+                <li>toast (jam/peanut butter/vegan spread & cheese)</li>
+                <li>fruit salad with selected toppings</li>
+                <li>homemade lemon & cinnamon cupcakes</li>
+                <li>pancakes (sweet & savoury options)</li>
+                <li>breakfast bowl with selected toppings</li>
+            </ul>
+            <h2>lunch & light bites</h2>
+            <ul class="menu-items"> 
+                    <li>seasonal soup with homemade bread</li>
+                    <li>nachos with jalapeño salsa & guacamole</li>
+                    <li>olives in a garlic & herb marinade</li>
+                    <li>falafels with selected dipping sauces</li>
+                    <li>selection of sandwiches, burgers & salads</li>
+            </ul>
             <div class="vegas-container lunch"></div>
-            <h2>Drinks</h2>
+            <h2>drinks</h2>
             <div class="vegas-container drinks"></div>
+            <ul class="menu-items"> 
+                    <li>fairtrade coffee (espresso, americano, latte – you name it!)</li>
+                    <li>selection of soft drinks & organic teas</li>
+                    <li>freshly made smoothies, lemonades & juice</li>
+                    <li>selection of vegan beers & ales</li>
+                    <li>+ filtered tap water on the house!</li>
+            </ul>
         </div>
     </section>
     <section id="about-us">

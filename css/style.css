@@ -67,6 +67,17 @@ img.cafe {
     opacity: 0.70;
 }
 
+.gif {
+    width: 100%;
+    height: auto;
+    background-color: rgba(133,125,121, 0.75);
+    border-radius: 5px;
+}
+
+.menu-items {
+    display: inline-block;
+    text-align: left;
+}
 /* needs to set height & width to make the container visible */
 .vegas-container {
     width: 300px;

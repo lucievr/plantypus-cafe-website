@@ -22,55 +22,44 @@ flatpickr("#time", {
 });
 
 //ball follows cursor
-const ball = document.querySelector(".ball");
+// const ball = document.querySelector(".ball");
 
-let mouseX = 0;
-let mouseY = 0;
+// let mouseX = 0;
+// let mouseY = 0;
 
-let ballX = 0;
-let ballY = 0;
+// let ballX = 0;
+// let ballY = 0;
 
-let speed = 0.09;
+// let speed = 0.09;
 
-function animate() {
-  let distX = mouseX - ballX;
-  let distY = mouseY - ballY;
+// function animate() {
+//   let distX = mouseX - ballX;
+//   let distY = mouseY - ballY;
   
-  ballX = ballX + (distX * speed);
-  ballY = ballY + (distY * speed);
+//   ballX = ballX + (distX * speed);
+//   ballY = ballY + (distY * speed);
   
-  ball.style.left = ballX + "px";
-  ball.style.top = ballY + "px";
+//   ball.style.left = ballX + "px";
+//   ball.style.top = ballY + "px";
   
-  requestAnimationFrame(animate);
-}
+//   requestAnimationFrame(animate);
+// }
 
-animate();
+// animate();
 
-document.addEventListener("mousemove", function (event) {
-  mouseX = event.pageX;
-  mouseY = event.pageY;
-});
+// document.addEventListener("mousemove", function (event) {
+//   mouseX = event.pageX;
+//   mouseY = event.pageY;
+// });
 
+
+//hide menu options after 3 seconds when user clicks on hamburger menu
 $(".navbar-toggler").click(function(){ 
     setTimeout(function(){ 
         $(".navbar-collapse").removeClass("show"); 
     }, 3000); 
 });
 
-
-
-
-// $(document).scroll (function () {
-//     let heightNavbar = $(".navbar").height();     //get height property
-//     let userPosition = $(window).scrollTop();       //find out where the user has scrolled to
-//     //sticky top line or not sticky
-//     if (userPosition > (heightNavbar / 10)) {
-//         $(".navbar").addClass("sticky");
-//     } else {
-//         $(".navbar").removeClass("sticky");
-//     }
-// });
 
 //navigation to sections
 $("a.nav-link").click(function () {
@@ -79,21 +68,17 @@ $("a.nav-link").click(function () {
     let sectionPosition = $(sectionId).offset().top;                        //figure out position of section Id from top
     let menuHeight = $(".navbar").height();
 
-    if($(".navbar").hasClass("sticky")) {
         $("html").animate({
-            scrollTop: sectionPosition - (menuHeight * 1)
-        });
-    } else {
-        $("html").animate({
-            scrollTop: sectionPosition - (menuHeight * 2)   //when user on top before scrolling down (menu not sticky), needs to add menu height once more
+            scrollTop: sectionPosition - menuHeight - 15
         });
     }
-});
+);
 
 $("a.nav-link").click(function (event) {
     event.preventDefault();
 });  
-                                           //to prevent default behaviour of anchor tags, the #contact, #booking etc will disappear from the search bar/url
+ //to prevent default behaviour of anchor tags, the #contact, #booking etc will disappear from the search bar/url
+
 //gradual display of containers
 $(window).scroll(function(){
 
@@ -160,7 +145,6 @@ $(".vegas-container.lunch").vegas({
     transition: 'slideRight2',
     animation: 'random'
 });
-
 
 $(".vegas-container.drinks").vegas({
     slides: [
