@@ -17,7 +17,7 @@ flatpickr("#time", {
     dateFormat: "H:i",
     time_24hr: true,
     minTime: "10:00",
-    maxTime: "22:00",
+    maxTime: "21:00",
     minuteIncrement: 30
 });
 
@@ -39,7 +39,6 @@ function animate() {
   ballX = ballX + (distX * speed);
   ballY = ballY + (distY * speed);
   
-  
   ball.style.left = ballX + "px";
   ball.style.top = ballY + "px";
   
@@ -53,18 +52,25 @@ document.addEventListener("mousemove", function (event) {
   mouseY = event.pageY;
 });
 
-
-
-$(document).scroll (function () {
-    let heightNavbar = $(".navbar").height();     //get height property
-    let userPosition = $(window).scrollTop();       //find out where the user has scrolled to
-    //sticky top line or not sticky
-    if (userPosition > (heightNavbar / 10)) {
-        $(".navbar").addClass("sticky");
-    } else {
-        $(".navbar").removeClass("sticky");
-    }
+$(".navbar-toggler").click(function(){ 
+    setTimeout(function(){ 
+        $(".navbar-collapse").removeClass("show"); 
+    }, 3000); 
 });
+
+
+
+
+// $(document).scroll (function () {
+//     let heightNavbar = $(".navbar").height();     //get height property
+//     let userPosition = $(window).scrollTop();       //find out where the user has scrolled to
+//     //sticky top line or not sticky
+//     if (userPosition > (heightNavbar / 10)) {
+//         $(".navbar").addClass("sticky");
+//     } else {
+//         $(".navbar").removeClass("sticky");
+//     }
+// });
 
 //navigation to sections
 $("a.nav-link").click(function () {
