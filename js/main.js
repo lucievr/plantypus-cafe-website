@@ -52,6 +52,25 @@ flatpickr("#time", {
 //   mouseY = event.pageY;
 // });
 
+$("h1.menu").mouseover(function () {
+    $(".line.menu").addClass("active");
+ });
+ $("h1.about").mouseover(function () {
+    $(".line.about").addClass("active");
+ });
+ $("h1.team").mouseover(function () {
+    $(".line.team").addClass("active");
+ });
+ $("h1.location").mouseover(function () {
+    $(".line.location").addClass("active");
+ });
+ $("h1.booking").mouseover(function () {
+    $(".line.booking").addClass("active");
+ });
+
+ $("h1").mouseout(function () {
+     $(".line").removeClass("active");
+  });
 
 //hide menu options after 3 seconds when user clicks on hamburger menu
 $(".navbar-toggler").click(function(){ 

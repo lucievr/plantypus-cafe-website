@@ -52,7 +52,36 @@ h1 {
     font-family: 'Quicksand', sans-serif;
 }
 h1, h2, h3 {
-    padding: 2% 0 1%;
+    padding: 2% 0 0;
+}
+h1:hover {
+    cursor: pointer;
+}
+
+.line {
+background: #a37854;
+width: 13.2%;
+height: 5px;
+border-radius: 3px;
+margin: 0 auto;
+transition: all 1.5s;
+}
+.line.menu {
+    width: 7.5%;
+}
+.line.about {
+    width: 12.5%;
+}
+.line.location {
+    width: 22%;
+}
+.line.booking {
+    width: 20%;
+}
+
+.line.active {
+width: 30%;
+cursor: pointer;
 }
 
 .title {
@@ -92,7 +121,7 @@ img.cafe {
 }
 /* change colour of progress bar, class found in vegas effect docs */
 .vegas-timer-progress {
-    background-color: rgb(131, 85, 0);
+    background-color: #a37854;
 }
 
 
@@ -110,7 +139,7 @@ img.staff:hover {
 }
 
 .color-section {
-    background-color: rgba(254,181,78, 0.9);
+    background-color: rgba(254,181,78, 0.8);
 }
 
 .container-fluid {
@@ -144,15 +173,17 @@ img.staff:hover {
 }
 
 ol.carousel-indicators li {
-    background-color: black;
+    background-color: rgba(254,181,78, 0.9);
 }
 
 img.about {
-    width: 350px;
+    width: 310px;
     height: auto;
     border-radius: 5px;
+    /* margin: 25px; */
+    
+   
 }
-
 
 .map iframe {
     width: 100%;
@@ -181,8 +212,8 @@ img.about {
     margin: 20px;
 }
 
-#contact {
-    background-color: rgba(133,125,121, 0.75)
+#contact, footer {
+    background-color: rgba(133,125,121, 0.75);
 }
 
 .social-icon {
@@ -194,6 +225,7 @@ img.about {
 .social-icon:hover {
     color: rgb(113,76,47);
 }
+
 
 #backToTop {
     position: fixed; /* Fixed/sticky position */
