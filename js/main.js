@@ -1,5 +1,27 @@
 //jshint esversion: 6
 
+//moving letters animation
+$('.ml6 .letters').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+  
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml6 .letter',
+      translateY: ["1.5em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: function(el, i) {
+        return 50 * i;
+      }
+    }).add({
+      targets: '.ml6',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 5000
+    });
+
 flatpickr("#date", {
     "locale": {
         "firstDayOfWeek": 1 // start week on Monday
@@ -85,10 +107,8 @@ $("a.nav-link").click(function () {
     let sectionId = $(this).attr("href");      
     //looking for a anchor tag inside class menu ul li; return attribute value of href id (e.g. booking, contact etc.)
     let sectionPosition = $(sectionId).offset().top;                        //figure out position of section Id from top
-    let menuHeight = $(".navbar").height();
-
         $("html").animate({
-            scrollTop: sectionPosition - menuHeight - 15
+            scrollTop: sectionPosition - 55
         });
     }
 );
