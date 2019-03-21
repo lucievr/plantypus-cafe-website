@@ -47,6 +47,10 @@ body {
     text-shadow: 2px 2px black;
 }
 
+h2, h5 {
+    font-family: 'Sofia', cursive;
+}
+
 
 h1 {
     font-family: 'Quicksand', sans-serif;
@@ -106,6 +110,12 @@ img.cafe {
 .menu-items {
     display: inline-block;
     text-align: left;
+    max-width: 360px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+ul {
+    padding: 20px 25px 5px 40px;
 }
 /* needs to set height & width to make the container visible */
 .vegas-container {
