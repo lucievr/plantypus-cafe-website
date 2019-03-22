@@ -41,11 +41,49 @@ body {
     }
 
 .big-heading {
-    font-size: 6rem;
+    font-size: 6.5rem;
     font-family: 'Sofia', cursive;
     color: rgba(254,181,78, 1);
     text-shadow: 4px 2px 8px black;
 }
+
+@media screen and (max-width: 1290px) {
+    .big-heading {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 0.7rem;
+    }
+    .big-heading {
+        font-size: 2rem;
+    }
+    h3.letters {
+        font-size: 0.8rem;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .vegas-container {
+        width: 200px!important;
+        height: 200px!important;
+    }
+}
+
+/* @media screen and (max-width: 1080px) {
+    .title {
+        margin-left: 30px;
+    }
+} */
+
 
 h2, h5 {
     font-family: 'Sofia', cursive;
@@ -92,7 +130,7 @@ cursor: pointer;
     position: absolute;
     z-index: 3;
     color: white;
-    margin: 200px;
+    margin: 15% 0 0 12%;
     text-shadow: 2px 2px 4px #000000;
     background-color: rgba(133,125,121, 0.2);
     padding: 0 20px 0;
@@ -194,6 +232,7 @@ img.staff:hover {
 
 .container-fluid {
     padding: 0;
+    position: relative;
 }
 
 .navbar {
@@ -214,6 +253,7 @@ img.staff:hover {
 
 .nav-link {
     font-family: 'Quicksand', sans-serif;
+    font-weight: 550;
     margin: 0;
     border-radius: 6px;
 }
