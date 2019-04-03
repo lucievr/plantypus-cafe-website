@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     text-align: center;
     font-family: 'Sanchez', serif;
+    font-size:calc(8px + 0.6vw);
     line-height: 1.5;
     margin: 0;
     overflow-x: hidden;
@@ -41,49 +46,33 @@ body {
     }
 
 .big-heading {
-    font-size: 6.5rem;
+    font-size:calc(10px + 5vw);
     font-family: 'Sofia', cursive;
     color: rgba(254,181,78, 1);
     text-shadow: 4px 2px 8px black;
 }
 
-@media screen and (max-width: 1290px) {
-    .big-heading {
-        font-size: 5rem;
-    }
+.letters, .logo {
+    font-size:calc(3px + 1.5vw);
+    line-height: 1;
 }
 
+
 @media screen and (max-width: 400px) {
-    body {
-        font-size: 0.7rem;
-    }
-    .big-heading {
-        font-size: 2rem;
-    }
-    h3.letters {
-        font-size: 0.8rem;
-    }
-    .logo {
-        font-size: 1rem;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-    h2 {
-        font-size: 1.2rem;
-    }
+
     .vegas-container {
         width: 200px!important;
         height: 200px!important;
     }
 }
 
-/* @media screen and (max-width: 1080px) {
-    .title {
-        margin-left: 30px;
-    }
-} */
+h1 {
+    font-size:calc(8px + 2.5vw);
+}
 
+h2 {
+    font-size:calc(6px + 2vw);
+}
 
 h2, h5 {
     font-family: 'Sofia', cursive;
@@ -92,49 +81,49 @@ h2, h5 {
 
 h1, h3 {
     font-family: 'Quicksand', sans-serif;
-}
-h1, h3 {
     padding: 2% 0 0;
 }
+
 h1:hover {
     cursor: pointer;
 }
 
 .line {
 background: #a37854;
-width: 182px;
+width: calc(35px + 12vw);
 height: 5px;
 border-radius: 3px;
 margin: 0 auto 20px;
-transition: all 1.5s;
+transition: all 1.5s ease-in-out;
 }
 .line.menu {
-    width: 104px;
+    width: calc(20px + 7vw);
 }
 .line.about {
-    width: 173px;
+    width: calc(30px + 11.5vw);
 }
 .line.location {
-    width: 304px;
+    width: calc(50px + 20vw);
 }
 .line.booking {
-    width: 277px;
+    width: calc(50px + 18vw);
 }
 
 .line.active {
-width: 40%;
+width: calc(20px + 3vw);
 cursor: pointer;
 }
 
 .title {
     position: absolute;
+    font-size: 2.5vw;
     z-index: 3;
     color: white;
     margin: 15% 0 0 12%;
     text-shadow: 2px 2px 4px #000000;
     background-color: rgba(133,125,121, 0.2);
     padding: 0 20px 0;
-    /* border-radius: 100px; */
+
 }
 
 .ml6 {
@@ -160,6 +149,11 @@ img.cafe {
     width: 100%;
     height: auto;
     opacity: 0.70;
+}
+
+.modal-dialog {
+    width: 50vw;
+    margin: 0 auto;
 }
 
 .gif {
@@ -215,15 +209,16 @@ li {
 
 img.staff {
     border-radius: 50%;
-    padding: 20px;
-    max-width: 320px;
+    width: calc(200px + 2vw);
+    margin: 5%;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(163, 120, 84, 1);
     transition: all 0.8s;
 }
 
 img.staff:hover {
-    width: 105%;
-    padding: 0;
-
+    opacity: 0.95;
+    border: 3px solid transparent;
 }
 
 .color-section {
@@ -297,8 +292,6 @@ img.about {
     display: flex;
     justify-content: center;
     align-content: center;
-
-
 }
 
 .form-row {
