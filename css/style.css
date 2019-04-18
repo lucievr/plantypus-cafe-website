@@ -81,7 +81,7 @@ h2, h5 {
 
 h1, h3 {
     font-family: 'Quicksand', sans-serif;
-    padding: 2% 0 0;
+    padding-top: calc(17px + 1vw);
 }
 
 h1:hover {
@@ -168,7 +168,7 @@ img.cafe {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px 15px;
+    padding: 15px 15px 20px;
 }
 
 .menu-items {
@@ -230,6 +230,10 @@ img.staff:hover {
     position: relative;
 }
 
+.pad-bot {
+    padding-bottom: calc(20px + 2vh);
+}
+
 .navbar {
     background-color: rgba(133,125,121, 0.75);
     z-index: 4;
@@ -274,8 +278,6 @@ img.about {
     border-radius: 5px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
-    
-   
 }
 
 .map iframe {
@@ -285,7 +287,6 @@ img.about {
 .map {
     background: grey;
     padding: 5px 0;
-
 }
 
 .booking-container {
@@ -308,10 +309,11 @@ img.about {
 }
 
 .card {
-    margin: 30px;
+    margin: 15px auto 20px;
     background-color: rgb(182, 171, 157, 0.8);
     color: black;
     border: 3px solid rgba(254,181,78, 0.8);
+    width: calc(200px + 5vw); 
 }
 
 .card-title {
@@ -319,17 +321,17 @@ img.about {
     color: white;
 }
 .social-icon {
-    font-size: 2.5rem;
+    font-size: calc(15px + 1vw);
     padding: 2%;
     color: black;
-
 }
+
 .social-icon:hover {
     color: rgb(83, 64, 49);
 }
 
 a {
-    color: black;
+    color: rgb(83, 64, 49);
 }
 
 a:hover {
@@ -350,4 +352,9 @@ a:hover {
 
 #backToTop:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+footer {
+    line-height: 0.5;
+    padding-bottom: 1%;
 }
