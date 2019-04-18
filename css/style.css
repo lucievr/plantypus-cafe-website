@@ -307,6 +307,17 @@ img.about {
     background-color: rgba(133,125,121, 0.75);
 }
 
+.card {
+    margin: 30px;
+    background-color: rgb(182, 171, 157, 0.8);
+    color: black;
+    border: 3px solid rgba(254,181,78, 0.8);
+}
+
+.card-title {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
 .social-icon {
     font-size: 2.5rem;
     padding: 2%;
@@ -314,9 +325,16 @@ img.about {
 
 }
 .social-icon:hover {
-    color: rgb(113,76,47);
+    color: rgb(83, 64, 49);
 }
 
+a {
+    color: rgb(83, 64, 49);
+}
+
+a:hover {
+    color: black;
+}
 
 #backToTop {
     position: fixed; /* Fixed/sticky position */
