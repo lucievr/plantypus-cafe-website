@@ -33,15 +33,15 @@ flatpickr("#date", {
     maxDate: new Date().fp_incr(90)
 });
 
-flatpickr("#time", {
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "H:i",
-    time_24hr: true,
-    minTime: "10:00",
-    maxTime: "21:00",
-    minuteIncrement: 30
-});
+// flatpickr("#time", {
+//     enableTime: true,
+//     noCalendar: true,
+//     dateFormat: "H:i",
+//     time_24hr: true,
+//     minTime: "10:00",
+//     maxTime: "21:00",
+//     minuteIncrement: 30
+// });
 
 //ball follows cursor
 // const ball = document.querySelector(".ball");
