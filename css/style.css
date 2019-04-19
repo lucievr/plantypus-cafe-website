@@ -5,7 +5,7 @@
 body {
     text-align: center;
     font-family: 'Sanchez', serif;
-    font-size:calc(8px + 0.6vw);
+    font-size:calc(9px + 0.5vw);
     line-height: 1.5;
     margin: 0;
     overflow-x: hidden;
@@ -46,17 +46,21 @@ body {
     }
 
 .big-heading {
-    font-size:calc(10px + 5vw);
+    font-size:calc(20px + 4vw);
     font-family: 'Sofia', cursive;
     color: rgba(254,181,78, 1);
     text-shadow: 4px 2px 8px black;
 }
 
-.letters, .logo {
-    font-size:calc(3px + 1.5vw);
-    line-height: 1;
+.letters {
+    font-size:calc(8px + 1vw);
+    line-height: 0;
+    padding-top: 0;
 }
 
+.logo {
+    font-size:calc(9px + 0.85vw);
+}
 
 @media screen and (max-width: 400px) {
 
@@ -212,13 +216,13 @@ img.staff {
     width: calc(200px + 2vw);
     margin: 5%;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-    border: 3px solid rgba(163, 120, 84, 1);
+    border: 3px solid transparent;
     transition: all 0.8s;
 }
 
 img.staff:hover {
     opacity: 0.95;
-    border: 3px solid transparent;
+    border: 3px solid rgba(163, 120, 84, 1);
 }
 
 .color-section {
@@ -304,6 +308,17 @@ img.about {
     margin: 20px;
 }
 
+.form-control {
+    font-size: calc(9px + 0.5vw);
+}
+
+.btn-lg {
+    font-size: calc(10px + 0.8vw);
+    background-color: rgb(68, 151, 68);
+    border-color: transparent;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
 #contact, footer {
     background-color: rgba(133,125,121, 0.75);
 }
@@ -313,6 +328,7 @@ img.about {
     background-color: rgb(182, 171, 157, 0.8);
     color: black;
     border: 3px solid rgba(254,181,78, 0.8);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
     width: calc(200px + 5vw); 
 }
 
@@ -321,8 +337,8 @@ img.about {
     color: white;
 }
 .social-icon {
-    font-size: calc(15px + 1vw);
-    padding: 2%;
+    font-size: calc(20px + 1vw);
+    padding: 4%;
     color: black;
 }
 
