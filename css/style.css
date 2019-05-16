@@ -70,26 +70,31 @@ body {
     }
 }
 
-h1 {
+h2 {
     font-size:calc(8px + 2.5vw);
 }
 
-h2 {
-    font-size:calc(6px + 2vw);
+h2:hover {
+    cursor: pointer;
 }
 
-h2, h5 {
-    font-family: 'Sofia', cursive;
-    padding-top: 10px; 
-}
-
-h1, h3 {
+h2, h3 {
     font-family: 'Quicksand', sans-serif;
     padding-top: calc(17px + 1vw);
 }
 
-h1:hover {
-    cursor: pointer;
+h3 {
+    font-size:calc(6px + 2vw);
+}
+
+h3, h5 {
+    font-family: 'Sofia', cursive;
+    padding-top: 10px; 
+}
+
+section {
+    padding: 1px;
+    min-height: 80vh;
 }
 
 .line {
@@ -241,6 +246,7 @@ img.staff:hover {
 .navbar {
     background-color: rgba(133,125,121, 0.75);
     z-index: 4;
+    top: 0;
 }
 
 .navbar.sticky {
@@ -372,5 +378,6 @@ a:hover {
 
 footer {
     line-height: 0.5;
+    padding: 1px;
     padding-bottom: 1%;
 }
