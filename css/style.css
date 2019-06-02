@@ -149,12 +149,24 @@ h3, h5 {
 section {
     padding: 1px;
     min-height: 200px;
+    padding-bottom: calc(15px + 3vw);
 }
 
 @media screen and (min-width: 700px) {
 
     section#home {
         min-height: 500px;
+    }
+
+    section {
+        min-height: 500px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    section#home {
+        min-height: 700px;
     }
 }
 
@@ -163,7 +175,7 @@ background: #a37854;
 width: calc(35px + 12vw);
 height: 5px;
 border-radius: 3px;
-margin: 0 auto 20px;
+margin: 0 auto 30px;
 transition: all 1.5s ease-in-out;
 }
 .line.menu {
@@ -189,10 +201,11 @@ cursor: pointer;
     font-size: 2.5vw;
     z-index: 3;
     color: white;
-    margin: 24% 0 0 12%;
     text-shadow: 2px 2px 4px #000000;
     background-color: rgba(133,125,121, 0.2);
     padding: 0 20px 0;
+    margin-top: calc(40px + 14vw);
+    margin-left: calc(1px + 12vw);
 }
 
 .ml6 {
@@ -287,27 +300,35 @@ img.staff:hover {
     padding-bottom: calc(20px + 2vh);
 }
 
-.navbar {
+nav.navbar.navbar-expand-lg.navbar-light {
     background-color: rgba(133,125,121, 0.75);
     z-index: 4;
     top: 0;
+    left: 0;
+    padding: 5px;
+    min-height: 58px;
 }
 
-.navbar.sticky {
+nav.navbar.navbar-expand-lg.navbar-light.sticky {
     flex-flow: row nowrap;
     position: fixed;
     width: 100%;
     align-items: center;
+    min-height: 58px;
+}
+
+a.navbar-brand {
+    margin-left: 15px;
 }
 
 .nav-item {
-    padding: 1rem 2.5 rem;
+    padding: 10px;
 }
 
 .nav-link {
     font-family: 'Quicksand', sans-serif;
     font-weight: 550;
-    margin: 0;
+    margin: 0 7px;
     border-radius: 6px;
 }
 
@@ -332,9 +353,20 @@ a.carousel-control-prev, a.carousel-control-next {
     }
 }
 
+@media screen and (min-width: 700px) {
+
+    a.carousel-control-prev {
+        margin-left: 20px;
+    }
+    
+    a.carousel-control-next {
+        margin-right: 20px;
+    }
+}
+
 .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: rgba(254,181,78, 0.4);
-    border-radius: 8px;
+    background-color: rgba(254,181,78, 0.6);
+    /* border-radius: 8px; */
     padding: 20px;
 }
 
@@ -343,6 +375,7 @@ div.card.mb-3 {
     width: 100vw;
     background-color: white;
     border: none;
+    box-shadow: none;
 }
 
 .carousel-item .card-body .card-text {
@@ -357,7 +390,7 @@ div.card.mb-3 {
 }
 
 img.about.card-img {
-    width: calc(250px + 1vw);
+    width: calc(250px + 3vw);
     max-width: 90vw;
     height: auto;
     border-radius: 5px;
@@ -376,6 +409,7 @@ img.about.card-img {
 
     img.about.card-img {
         margin: 20px;
+        margin-left: 100px;
     }
 }
 
@@ -431,7 +465,7 @@ img.about.card-img {
 .card-title {
     font-family: 'Quicksand', sans-serif;
     color: white;
-    font-size:calc(6px + 2vw);
+    font-size:calc(6px + 1.5vw);
 }
 .social-icon {
     font-size: calc(20px + 1vw);
@@ -451,7 +485,9 @@ a:hover {
     color: black;
 }
 
-#backToTop {
+
+
+button#backToTop {
     position: fixed; /* Fixed/sticky position */
     line-height: 1.3;
     bottom: 20px; /* Place the button at the bottom of the page */
@@ -463,8 +499,15 @@ a:hover {
     /* to hide the top button as default and then only display when user scrolls down */
 }
 
-#backToTop:hover {
+button#backToTop:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+@media screen and (max-width: 550px) {
+
+    button#backToTop {
+        display: none!important;
+    }
 }
 
 footer {

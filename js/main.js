@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //figure out position of section Id from top
     let sectionPosition = $(sectionId).offset().top;
     $("html").animate({
-      scrollTop: sectionPosition - 55
+      scrollTop: sectionPosition - 58
     });
   });
 
