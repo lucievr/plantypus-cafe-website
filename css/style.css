@@ -43,8 +43,7 @@ body {
     100% {
       width: 16px;
     }
-    }
-
+}
 
 section#home {
     background-color: rgba(133,125,121, 0.75);
@@ -53,11 +52,18 @@ section#home {
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: screen;
-    min-height: 50vh;
+    min-height: 300px;
+}
 
-    
-    
-    /* center/contain no-repeat fixed; */
+img.d-inline-block.align-top {
+    width: calc(20px + 0.8vw);
+    height: calc(20px + 0.8vw);
+    margin-top: 5px;
+}
+
+span.navbar-toggler-icon {
+    width: calc(20px + 1vw);
+    height: calc(20px + 1vw);
 }
 
 .big-heading {
@@ -65,6 +71,7 @@ section#home {
     font-family: 'Sofia', cursive;
     color: rgba(254,181,78, 1);
     text-shadow: 4px 2px 8px black;
+    margin-top: 10px;
 }
 
 .letters {
@@ -74,14 +81,46 @@ section#home {
 }
 
 .logo {
-    font-size:calc(9px + 0.85vw);
+    font-size:calc(9px + 0.95vw);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 699px) {
 
     .vegas-container {
-        width: 200px!important;
-        height: 200px!important;
+        width: 300px!important;
+        height: 300px!important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .vegas-container {
+        max-width: 250px!important;
+        max-height: 250px!important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .vegas-container {
+        max-width: 230px!important;
+        max-height: 230px!important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .vegas-container {
+        max-width: 200px!important;
+        max-height: 200px!important;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    .vegas-container {
+        width: 350px!important;
+        height: 350px!important;
     }
 }
 
@@ -110,6 +149,13 @@ h3, h5 {
 section {
     padding: 1px;
     min-height: 200px;
+}
+
+@media screen and (min-width: 700px) {
+
+    section#home {
+        min-height: 500px;
+    }
 }
 
 .line {
@@ -143,7 +189,7 @@ cursor: pointer;
     font-size: 2.5vw;
     z-index: 3;
     color: white;
-    margin: 15% 0 0 12%;
+    margin: 24% 0 0 12%;
     text-shadow: 2px 2px 4px #000000;
     background-color: rgba(133,125,121, 0.2);
     padding: 0 20px 0;
@@ -158,21 +204,14 @@ cursor: pointer;
     display: inline-block;
     padding-top: 0.2em;
     padding-right: 0.05em;
-    padding-bottom: 0.1em;
     overflow: hidden;
   }
   
   .ml6 .letter {
     display: inline-block;
     line-height: 1em;
+    font-family: 'Sanchez', serif;
   }
-
-
-img.cafe {
-    width: 100%;
-    height: auto;
-    opacity: 0.70;
-}
 
 .container {
     display: inline-flex;
@@ -215,6 +254,10 @@ li {
 /* change colour of progress bar, class found in vegas effect docs */
 .vegas-timer-progress {
     background-color: #a37854;
+}
+
+section#about-us div.container-fluid {
+    padding-bottom: 0;
 }
 
 img.staff {
@@ -272,9 +315,21 @@ img.staff:hover {
     background-color: rgba(254,181,78, 0.9);
 }
 
-ol.carousel-indicators li {
-    background-color: rgba(254,181,78, 0.9);
-    margin-bottom: 25px;
+
+a.carousel-control-prev, a.carousel-control-next {
+    width: 50px;
+    height: 450px;
+}
+
+@media screen and (min-width: 400px) {
+
+    a.carousel-control-prev {
+        margin-left: 10px;
+    }
+    
+    a.carousel-control-next {
+        margin-right: 10px;
+    }
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -286,7 +341,6 @@ ol.carousel-indicators li {
 div.card.mb-3 {
     min-width: calc(250px + 1vw);
     width: 100vw;
-    /* max-width: 90vw; */
     background-color: white;
     border: none;
 }
@@ -298,7 +352,8 @@ div.card.mb-3 {
 .carousel-item .card-title {
     color: black;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-bottom: 0;
 }
 
 img.about.card-img {
@@ -307,8 +362,23 @@ img.about.card-img {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-    /* margin-bottom: 30px; */
+
 }
+
+@media screen and (min-width: 400px) {
+
+    img.about.card-img {
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    img.about.card-img {
+        margin: 20px;
+    }
+}
+
 
 .map iframe {
     width: 100%;

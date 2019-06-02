@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .timeline({ loop: true })
     .add({
       targets: ".ml6 .letter",
-      translateY: ["1.5em", 0],
+      translateY: ["2em", 0],
       translateZ: 0,
       duration: 750,
       delay: function(el, i) {
