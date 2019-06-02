@@ -1,517 +1,526 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    font-family: 'Sanchez', serif;
-    font-size:calc(9px + 0.5vw);
-    line-height: 1.5;
-    margin: 0;
-    overflow-x: hidden;
+  text-align: center;
+  font-family: "Sanchez", serif;
+  font-size: calc(9px + 0.5vw);
+  line-height: 1.5;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .hidden {
-    opacity: 0;
+  opacity: 0;
 }
 
 .ball {
-    border: solid 1px grey;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  border: solid 1px grey;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.run-animation {
+  animation: my-animation 2s ease;
+}
+
+@keyframes my-animation {
+  0% {
+    width: 16px;
   }
-  
-  .run-animation {
-    animation: my-animation 2s ease;
+  50% {
+    width: 40px;
   }
-  
-  @keyframes my-animation {        
-    0% {
-      width:16px
-    }
-    50% {
-      width: 40px
-    }
-    100% {
-      width: 16px;
-    }
+  100% {
+    width: 16px;
+  }
 }
 
-section#home {
-    background-color: rgba(133,125,121, 0.75);
-    background-image: url("../img/cafe.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: screen;
-    min-height: 300px;
+/* common styles */
+
+section {
+  padding: 1px;
+  min-height: 200px;
+  padding-bottom: calc(15px + 3vw);
 }
 
-img.d-inline-block.align-top {
-    width: calc(20px + 0.8vw);
-    height: calc(20px + 0.8vw);
-    margin-top: 5px;
+section.color-section {
+  background-color: rgba(254, 181, 78, 0.8);
 }
 
-span.navbar-toggler-icon {
-    width: calc(20px + 1vw);
-    height: calc(20px + 1vw);
+div.container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 20px;
 }
 
-.big-heading {
-    font-size:calc(20px + 4vw);
-    font-family: 'Sofia', cursive;
-    color: rgba(254,181,78, 1);
-    text-shadow: 4px 2px 8px black;
-    margin-top: 10px;
+div.container-fluid {
+  padding: 0;
+  position: relative;
 }
 
-.letters {
-    font-size:calc(8px + 1vw);
-    line-height: 0;
-    padding-top: 0;
-}
-
-.logo {
-    font-size:calc(9px + 0.95vw);
-}
-
-@media screen and (max-width: 699px) {
-
-    .vegas-container {
-        width: 300px!important;
-        height: 300px!important;
-    }
-}
-
-@media screen and (max-width: 550px) {
-
-    .vegas-container {
-        max-width: 250px!important;
-        max-height: 250px!important;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    .vegas-container {
-        max-width: 230px!important;
-        max-height: 230px!important;
-    }
-}
-
-@media screen and (max-width: 350px) {
-
-    .vegas-container {
-        max-width: 200px!important;
-        max-height: 200px!important;
-    }
-}
-
-@media screen and (min-width: 700px) {
-
-    .vegas-container {
-        width: 350px!important;
-        height: 350px!important;
-    }
+div.pad-bot {
+  padding-bottom: calc(20px + 2vh);
 }
 
 h2 {
-    font-size:calc(8px + 2.5vw);
+  font-size: calc(8px + 2.5vw);
 }
 
 h2:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-h2, h3 {
-    font-family: 'Quicksand', sans-serif;
-    padding-top: calc(17px + 1vw);
+h2,
+h3 {
+  font-family: "Quicksand", sans-serif;
+  padding-top: calc(17px + 1vw);
 }
 
 h3 {
-    font-size:calc(6px + 2vw);
+  font-size: calc(6px + 2vw);
 }
 
-h3, h5 {
-    font-family: 'Sofia', cursive;
-    padding-top: 10px; 
+h3,
+h5 {
+  font-family: "Sofia", cursive;
+  padding-top: 10px;
 }
 
-section {
-    padding: 1px;
-    min-height: 200px;
-    padding-bottom: calc(15px + 3vw);
+/* section home */
+
+section#home {
+  background-color: rgba(133, 125, 121, 0.75);
+  background-image: url("../img/cafe.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: screen;
+  min-height: 300px;
 }
 
 @media screen and (min-width: 700px) {
+  section#home {
+    min-height: 500px;
+  }
 
-    section#home {
-        min-height: 500px;
-    }
-
-    section {
-        min-height: 500px;
-    }
+  section {
+    min-height: 500px;
+  }
 }
 
 @media screen and (min-width: 900px) {
-
-    section#home {
-        min-height: 700px;
-    }
-}
-
-.line {
-background: #a37854;
-width: calc(35px + 12vw);
-height: 5px;
-border-radius: 3px;
-margin: 0 auto 30px;
-transition: all 1.5s ease-in-out;
-}
-.line.menu {
-    width: calc(20px + 7vw);
-}
-.line.about {
-    width: calc(30px + 11.5vw);
-}
-.line.location {
-    width: calc(50px + 20vw);
-}
-.line.booking {
-    width: calc(50px + 18vw);
-}
-
-.line.active {
-width: calc(20px + 3vw);
-cursor: pointer;
-}
-
-.title {
-    position: absolute;
-    font-size: 2.5vw;
-    z-index: 3;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    background-color: rgba(133,125,121, 0.2);
-    padding: 0 20px 0;
-    margin-top: calc(40px + 14vw);
-    margin-left: calc(1px + 12vw);
-}
-
-.ml6 {
-    position: relative;
+  section#home {
+    min-height: 700px;
   }
-  
-  .ml6 .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.2em;
-    padding-right: 0.05em;
-    overflow: hidden;
-  }
-  
-  .ml6 .letter {
-    display: inline-block;
-    line-height: 1em;
-    font-family: 'Sanchez', serif;
-  }
-
-.container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 15px 20px;
 }
 
-.menu-items {
-    display: inline-block;
-    text-align: left;
-    max-width: 360px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    margin: 20px;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-}
-ul {
-    padding: 20px 25px 5px 40px;
-}
-li {
-    line-height: 1.8;
-}
-/* needs to set height & width to make the container visible */
-.vegas-container {
-    width: 350px;
-    height: 350px;
-    border-radius: 10px;
-    margin: 20px;
-    display: inline-block;
-    transition: all 0.8s;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+div.title {
+  position: absolute;
+  font-size: 2.5vw;
+  z-index: 3;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: rgba(133, 125, 121, 0.2);
+  padding: 0 20px 0;
+  margin-top: calc(40px + 14vw);
+  margin-left: calc(1px + 12vw);
 }
 
-.vegas-container:hover {
-    width: 380px;
-    height: 380px;
-}
-/* change colour of progress bar, class found in vegas effect docs */
-.vegas-timer-progress {
-    background-color: #a37854;
-}
-
-section#about-us div.container-fluid {
-    padding-bottom: 0;
+h1.big-heading {
+  font-size: calc(20px + 4vw);
+  font-family: "Sofia", cursive;
+  color: rgba(254, 181, 78, 1);
+  text-shadow: 4px 2px 8px black;
+  margin-top: 10px;
 }
 
-img.staff {
-    border-radius: 50%;
-    width: calc(200px + 2vw);
-    margin: 5%;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-    border: 3px solid transparent;
-    transition: all 0.8s;
+h3.ml6 {
+  position: relative;
 }
 
-img.staff:hover {
-    opacity: 0.95;
-    border: 3px solid rgba(163, 120, 84, 1);
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  overflow: hidden;
 }
 
-.color-section {
-    background-color: rgba(254,181,78, 0.8);
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-family: "Sanchez", serif;
 }
 
-.container-fluid {
-    padding: 0;
-    position: relative;
+h3.letters {
+  font-size: calc(8px + 1vw);
+  line-height: 0;
+  padding-top: 0;
 }
 
-.pad-bot {
-    padding-bottom: calc(20px + 2vh);
-}
+/* navbar */
 
 nav.navbar.navbar-expand-lg.navbar-light {
-    background-color: rgba(133,125,121, 0.75);
-    z-index: 4;
-    top: 0;
-    left: 0;
-    padding: 5px;
-    min-height: 58px;
+  background-color: rgba(133, 125, 121, 0.75);
+  z-index: 4;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  min-height: 58px;
 }
 
 nav.navbar.navbar-expand-lg.navbar-light.sticky {
-    flex-flow: row nowrap;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    min-height: 58px;
+  flex-flow: row nowrap;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  min-height: 58px;
 }
 
 a.navbar-brand {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
-.nav-item {
-    padding: 10px;
+img.d-inline-block.align-top {
+  width: calc(20px + 0.8vw);
+  height: calc(20px + 0.8vw);
+  margin-top: 5px;
 }
 
-.nav-link {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 550;
-    margin: 0 7px;
-    border-radius: 6px;
+span.logo {
+  font-size: calc(9px + 0.95vw);
 }
 
-.nav-link:hover {
-    background-color: rgba(254,181,78, 0.9);
+a.nav-item.nav-link {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 550;
+  padding: 10px;
+  margin: 0 7px;
+  border-radius: 6px;
 }
 
-
-a.carousel-control-prev, a.carousel-control-next {
-    width: 50px;
-    height: 450px;
+a.nav-item.nav-link:hover {
+  background-color: rgba(254, 181, 78, 0.9);
+  cursor: pointer;
 }
 
-@media screen and (min-width: 400px) {
-
-    a.carousel-control-prev {
-        margin-left: 10px;
-    }
-    
-    a.carousel-control-next {
-        margin-right: 10px;
-    }
+span.navbar-toggler-icon {
+  width: calc(20px + 1vw);
+  height: calc(20px + 1vw);
 }
 
-@media screen and (min-width: 700px) {
+/* section menu */
 
-    a.carousel-control-prev {
-        margin-left: 20px;
-    }
-    
-    a.carousel-control-next {
-        margin-right: 20px;
-    }
+.line {
+  background: #a37854;
+  width: calc(35px + 12vw);
+  height: 5px;
+  border-radius: 3px;
+  margin: 0 auto 30px;
+  transition: all 1.5s ease-in-out;
+}
+.line.menu {
+  width: calc(20px + 7vw);
+}
+.line.about {
+  width: calc(30px + 11.5vw);
+}
+.line.location {
+  width: calc(50px + 20vw);
+}
+.line.booking {
+  width: calc(50px + 18vw);
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: rgba(254,181,78, 0.6);
-    /* border-radius: 8px; */
-    padding: 20px;
+.line.active {
+  width: calc(20px + 3vw);
+  cursor: pointer;
 }
 
-div.card.mb-3 {
-    min-width: calc(250px + 1vw);
-    width: 100vw;
-    background-color: white;
-    border: none;
-    box-shadow: none;
+.menu-items {
+  display: inline-block;
+  text-align: left;
+  max-width: 360px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.menu-items ul {
+  padding: 20px 25px 5px 40px;
+}
+.menu-items li {
+  line-height: 1.8;
 }
 
-.carousel-item .card-body .card-text {
-    text-align: left;
+.vegas-container {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  margin: 20px;
+  display: inline-block;
+  transition: all 0.8s;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
 }
 
-.carousel-item .card-title {
-    color: black;
-    text-align: left;
-    margin-left: 30px;
-    margin-bottom: 0;
+.vegas-timer-progress {
+  background-color: #a37854;
 }
 
-img.about.card-img {
-    width: calc(250px + 3vw);
-    max-width: 90vw;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-
-}
-
-@media screen and (min-width: 400px) {
-
-    img.about.card-img {
-        margin: 10px;
-    }
-}
-
-@media screen and (min-width: 600px) {
-
-    img.about.card-img {
-        margin: 20px;
-        margin-left: 100px;
-    }
-}
-
-
-.map iframe {
-    width: 100%;
-    vertical-align: top;
-}
-.map {
-    background: grey;
-    padding: 5px 0;
-}
-
-.booking-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.form-row {
-    width: 80vw;
-    justify-items: center;
-    align-items: center;
-}
-.form-group {
-    margin: 20px;
-}
-
-.form-control {
-    font-size: calc(9px + 0.5vw);
-}
-
-.btn-lg {
-    font-size: calc(10px + 0.8vw);
-    background-color: rgb(68, 151, 68);
-    border-color: transparent;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-}
-
-#contact, footer {
-    background-color: rgba(133,125,121, 0.75);
-}
-
-.card {
-    margin: 15px auto 20px;
-    background-color: rgb(182, 171, 157, 0.8);
-    color: black;
-    border: 3px solid rgba(254,181,78, 0.8);
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
-    width: calc(200px + 5vw); 
-}
-
-.card-title {
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-    font-size:calc(6px + 1.5vw);
-}
-.social-icon {
-    font-size: calc(20px + 1vw);
-    padding: 4%;
-    color: black;
-}
-
-.social-icon:hover {
-    color: rgb(83, 64, 49);
-}
-
-a {
-    color: rgb(83, 64, 49);
-}
-
-a:hover {
-    color: black;
-}
-
-
-
-button#backToTop {
-    position: fixed; /* Fixed/sticky position */
-    line-height: 1.3;
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    background-color: rgba(128, 32, 0, 0.9);
-    color: white;
-    display: none;      
-    /* to hide the top button as default and then only display when user scrolls down */
-}
-
-button#backToTop:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+@media screen and (max-width: 699px) {
+  .vegas-container {
+    width: 300px !important;
+    height: 300px !important;
+  }
 }
 
 @media screen and (max-width: 550px) {
-
-    button#backToTop {
-        display: none!important;
-    }
+  .vegas-container {
+    max-width: 250px !important;
+    max-height: 250px !important;
+  }
 }
 
+@media screen and (max-width: 450px) {
+  .vegas-container {
+    max-width: 230px !important;
+    max-height: 230px !important;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .vegas-container {
+    max-width: 200px !important;
+    max-height: 200px !important;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .vegas-container {
+    width: 350px !important;
+    height: 350px !important;
+  }
+}
+
+/* section about us */
+
+section#about-us div.container-fluid {
+  padding-bottom: 0;
+}
+
+a.carousel-control-prev,
+a.carousel-control-next {
+  width: 50px;
+  height: 450px;
+}
+
+@media screen and (min-width: 400px) {
+  a.carousel-control-prev {
+    margin-left: 10px;
+  }
+
+  a.carousel-control-next {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  a.carousel-control-prev {
+    margin-left: 20px;
+  }
+
+  a.carousel-control-next {
+    margin-right: 20px;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(254, 181, 78, 0.6);
+  padding: 20px;
+}
+
+div.card.mb-3 {
+  min-width: calc(250px + 1vw);
+  width: 100vw;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+}
+
+.carousel-item .card-body .card-text {
+  text-align: left;
+}
+
+.carousel-item .card-title {
+  color: black;
+  text-align: left;
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+
+img.about.card-img {
+  width: calc(250px + 3vw);
+  max-width: 90vw;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 400px) {
+  img.about.card-img {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  img.about.card-img {
+    margin: 20px;
+    margin-left: 100px;
+  }
+}
+
+/* section our team  */
+
+img.staff {
+  border-radius: 50%;
+  width: calc(200px + 2vw);
+  margin: 5%;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  transition: all 0.8s;
+}
+
+img.staff:hover {
+  opacity: 0.95;
+  border: 3px solid rgba(163, 120, 84, 1);
+}
+
+/* section location */
+
+section#location p {
+  margin-bottom: 35px;
+}
+
+.map iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+.map {
+  background: grey;
+  padding: 5px 0;
+}
+
+/* section booking */
+
+div.booking-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+div.form-row {
+  width: 80vw;
+  justify-items: center;
+  align-items: center;
+}
+div.form-group {
+  margin: 20px;
+}
+
+.form-control {
+  font-size: calc(9px + 0.5vw);
+}
+
+button.btn.btn-lg {
+  font-size: calc(10px + 0.8vw);
+  background-color: rgb(68, 151, 68);
+  border-color: transparent;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* section contact */
+
+section#contact,
 footer {
-    line-height: 0.5;
-    padding: 1px;
-    padding-bottom: 1%;
+  background-color: rgba(133, 125, 121, 0.75);
+}
+
+div.card {
+  margin: 15px auto 20px;
+  background-color: rgb(182, 171, 157, 0.8);
+  color: black;
+  border: 3px solid rgba(254, 181, 78, 0.8);
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  width: calc(200px + 5vw);
+}
+
+h5.card-title {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: calc(6px + 1.5vw);
+}
+
+i.social-icon {
+  font-size: calc(20px + 1vw);
+  padding: 4%;
+  color: black;
+}
+
+i.social-icon:hover {
+  color: rgb(83, 64, 49);
+  cursor: pointer;
+}
+
+div a {
+  color: rgb(83, 64, 49);
+}
+
+div a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+/* footer */
+
+footer {
+  line-height: 0.5;
+  padding: 1px;
+  padding-bottom: 1%;
+}
+
+/* backtotop button */
+
+button#backToTop {
+  position: fixed;
+  line-height: 1.3;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  background-color: rgba(128, 32, 0, 0.9);
+  color: white;
+  display: none;
+}
+
+button#backToTop:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  button#backToTop {
+    display: none !important;
+  }
 }
