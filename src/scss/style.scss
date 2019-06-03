@@ -3,7 +3,7 @@ $secondary-font: "Quicksand", sans-serif;
 $terciary-font: "Sofia", cursive;
 
 $primary-yellow: rgba(254, 181, 78, 0.8);
-$mocha-transparent: rgba(133, 125, 121, 0.75);
+$mocha-transparent: rgba(133, 125, 121, 0.85);
 $brown: rgb(83, 64, 49);
 $sand: #a37854;
 $box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
@@ -23,36 +23,6 @@ body {
 
 .hidden {
   opacity: 0;
-}
-
-.ball {
-  border: solid 1px grey;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.run-animation {
-  animation: my-animation 2s ease;
-}
-
-@keyframes my-animation {
-  0% {
-    width: 16px;
-  }
-  50% {
-    width: 40px;
-  }
-  100% {
-    width: 16px;
-  }
 }
 
 /* common styles */
@@ -130,7 +100,6 @@ section#home {
 div.title {
   position: absolute;
   font-size: 2.5vw;
-  z-index: 3;
   color: white;
   text-shadow: 2px 2px 4px #000000;
   background-color: rgba(133, 125, 121, 0.2);
@@ -170,7 +139,7 @@ div.title {
 
 nav.navbar.navbar-expand-lg.navbar-light {
   background-color: $mocha-transparent;
-  z-index: 4;
+  z-index: 99;
   top: 0;
   left: 0;
   padding: 5px;
@@ -201,7 +170,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     font-family: $secondary-font;
     font-weight: 550;
     padding: 10px;
-    margin: 0 7px;
+    margin: 0 5px;
     border-radius: 6px;
     &:hover {
       background-color: $primary-yellow;
@@ -219,10 +188,6 @@ nav.navbar.navbar-expand-lg.navbar-light {
   border-radius: 3px;
   margin: 0 auto 30px;
   transition: all 1.5s ease-in-out;
-  &.active {
-    width: calc(20px + 3vw);
-    cursor: pointer;
-  }
   &.menu {
     width: calc(20px + 7vw);
   }
@@ -234,6 +199,10 @@ nav.navbar.navbar-expand-lg.navbar-light {
   }
   &.booking {
     width: calc(50px + 18vw);
+  }
+  &.active {
+    width: calc(20px + 3vw);
+    cursor: pointer;
   }
 }
 
@@ -337,7 +306,7 @@ div.card.mb-3 {
   color: black;
   text-align: left;
   margin-left: 30px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 img.about.card-img {

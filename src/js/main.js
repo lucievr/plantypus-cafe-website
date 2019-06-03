@@ -1,7 +1,5 @@
-//jshint esversion: 6
-
 document.addEventListener("DOMContentLoaded", () => {
-  //moving letters animation
+  // moving letters animation
   $(".ml6 .letters").each(function() {
     $(this).html(
       $(this)
@@ -29,41 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 5000
     });
 
-  //ball follows cursor
-  // const ball = document.querySelector(".ball");
-
-  // let mouseX = 0;
-  // let mouseY = 0;
-
-  // let ballX = 0;
-  // let ballY = 0;
-
-  // let speed = 0.09;
-
-  // function animate() {
-  //   let distX = mouseX - ballX;
-  //   let distY = mouseY - ballY;
-
-  //   ballX = ballX + (distX * speed);
-  //   ballY = ballY + (distY * speed);
-
-  //   ball.style.left = ballX + "px";
-  //   ball.style.top = ballY + "px";
-
-  //   requestAnimationFrame(animate);
-  // }
-
-  // animate();
-
-  // document.addEventListener("mousemove", function (event) {
-  //   mouseX = event.pageX;
-  //   mouseY = event.pageY;
-  // });
-
-  //flatpick widget
+  // flatpickr widget
   flatpickr("#date", {
     locale: {
-      firstDayOfWeek: 1 // start week on Monday
+      firstDayOfWeek: 1
     },
     altInput: true,
     altFormat: "F j, Y",
@@ -72,27 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     maxDate: new Date().fp_incr(90)
   });
 
-  //lines animation
-  const headings = document.querySelectorAll("h2");
-  const lines = document.querySelectorAll(".line");
-
-  for (i = 0; i < headings.length; i++) {
-    headings[i].addEventListener("mouseover", () => {
-      for (j = 0; j < lines.length; j++) {
-        lines[j].classList.add("active");
-      }
-    });
-  }
-
-  for (i = 0; i < headings.length; i++) {
-    headings[i].addEventListener("mouseout", () => {
-      for (j = 0; j < lines.length; j++) {
-        lines[j].classList.remove("active");
-      }
-    });
-  }
-
-  //hide menu options after 3 seconds when user clicks on hamburger menu
   document.querySelector(".navbar-toggler").addEventListener("click", () => {
     setTimeout(() => {
       document.querySelector(".navbar-collapse").classList.remove("show");
@@ -101,27 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const navlinks = document.querySelectorAll("a.nav-link");
 
-  //navigation to sections
   $("a.nav-link").click(function() {
-    //looking for a anchor tag inside class menu ul li; return attribute value of href id (e.g. booking, contact etc.)
     let sectionId = $(this).attr("href");
-    //figure out position of section Id from top
     let sectionPosition = $(sectionId).offset().top;
     $("html").animate({
-      scrollTop: sectionPosition - 58
+      scrollTop: sectionPosition - 57
     });
   });
 
-  //to prevent default behaviour of anchor tags
   for (i = 0; i < navlinks.length; i++) {
     navlinks[i].addEventListener("click", event => {
       event.preventDefault();
     });
   }
 
-  //gradual display of containers
   $(window).scroll(function() {
-    //get rid of the error after scroll
     if ($(".hidden").length > 0) {
       const userPosition = $(window).scrollTop();
       const elementPosition = $(".hidden")
@@ -135,13 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const calc = elementPosition + sectionHeight / 2;
       const border = userPosition + windowHeight;
 
-      //is half of the element visible already?
       if (calc <= border) {
         $(".hidden")
           .first()
           .removeClass("hidden");
-
-        //does the element cover more than a half?
       } else if (windowHeight / 2 + userPosition >= elementPosition) {
         $(".hidden")
           .first()
@@ -150,7 +87,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // backtotop button to scroll up
+  $("h2.menu").mouseover(function() {
+    $(".line.menu").addClass("active");
+  });
+  $("h2.about").mouseover(function() {
+    $(".line.about").addClass("active");
+  });
+  $("h2.team").mouseover(function() {
+    $(".line.team").addClass("active");
+  });
+  $("h2.location").mouseover(function() {
+    $(".line.location").addClass("active");
+  });
+  $("h2.booking").mouseover(function() {
+    $(".line.booking").addClass("active");
+  });
+
+  $("h2").mouseout(function() {
+    $(".line").removeClass("active");
+  });
+
   $("#backToTop").click(function() {
     $("html").animate(
       {
@@ -160,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  //fadein/fadeout backtotop button
   $(window).scroll(function() {
     let userPosition = $(window).scrollTop();
     if (userPosition > 300) {
@@ -173,10 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
   //vegas effect
   $(".vegas-container.breakfast").vegas({
     slides: [
-      { src: "img/breakfast1.jpg" },
-      { src: "img/breakfast2.jpg" },
-      { src: "img/breakfast3.jpg" },
-      { src: "img/breakfast4.jpg" }
+      { src: "/img/breakfast1.jpg" },
+      { src: "/img/breakfast2.jpg" },
+      { src: "/img/breakfast3.jpg" },
+      { src: "/img/breakfast4.jpg" }
     ],
     transition: "slideLeft2",
     animation: "random"
@@ -184,11 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $(".vegas-container.lunch").vegas({
     slides: [
-      { src: "img/lunch1.jpg" },
-      { src: "img/lunch2.jpg" },
-      { src: "img/lunch3.jpg" },
-      { src: "img/lunch4.jpg" },
-      { src: "img/lunch5.jpg" }
+      { src: "/img/lunch1.jpg" },
+      { src: "/img/lunch2.jpg" },
+      { src: "/img/lunch3.jpg" },
+      { src: "/img/lunch4.jpg" },
+      { src: "/img/lunch5.jpg" }
     ],
     transition: "slideRight2",
     animation: "random"
@@ -196,10 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $(".vegas-container.drinks").vegas({
     slides: [
-      { src: "img/drink1.jpg" },
-      { src: "img/drink2.jpg" },
-      { src: "img/drink3.jpg" },
-      { src: "img/drink4.jpg" }
+      { src: "/img/drink1.jpg" },
+      { src: "/img/drink2.jpg" },
+      { src: "/img/drink3.jpg" },
+      { src: "/img/drink4.jpg" }
     ],
     transition: "slideLeft2",
     animation: "random"

@@ -3,7 +3,7 @@ const gulp = require("gulp");
 const del = require("del");
 const browsersync_server = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
-const csso = require('gulp-csso');
+const csso = require("gulp-csso");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
@@ -26,9 +26,7 @@ function publishHtml(done) {
 
 // Copy all js files into dist
 function publishJavaScript(done) {
-  return gulp
-    .src("src/js/**/*")
-    .pipe(gulp.dest("dist/js"));
+  return gulp.src("src/js/**/*").pipe(gulp.dest("dist/js"));
 }
 
 // Copy all images from src/img into dist
