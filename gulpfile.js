@@ -52,28 +52,28 @@ function compileScss(done) {
 }
 
 // watch files
-function watchFiles(done) {
-  gulp.watch("src/**/*.html", gulp.series(publishHtml, reload));
-  gulp.watch("src/js/**/*", gulp.series(publishJavaScript, reload));
-  gulp.watch("src/img/**/*", gulp.series(publishImages, reload));
-  gulp.watch("src/scss/**/*.scss", gulp.series(compileScss, reload));
-}
+// function watchFiles(done) {
+//   gulp.watch("src/**/*.html", gulp.series(publishHtml, reload));
+//   gulp.watch("src/js/**/*", gulp.series(publishJavaScript, reload));
+//   gulp.watch("src/img/**/*", gulp.series(publishImages, reload));
+//   gulp.watch("src/scss/**/*.scss", gulp.series(compileScss, reload));
+// }
 
-// browserSync server
-function serve(done) {
-  browsersync_server.init({
-    server: {
-      baseDir: "./dist/"
-    }
-  });
-  done();
-}
+// // browserSync server
+// function serve(done) {
+//   browsersync_server.init({
+//     server: {
+//       baseDir: "./dist/"
+//     }
+//   });
+//   done();
+// }
 
-// browserSync reload
-function reload(done) {
-  browsersync_server.reload();
-  done();
-}
+// // browserSync reload
+// function reload(done) {
+//   browsersync_server.reload();
+//   done();
+// }
 
 // export tasks
 exports.watch = gulp.series(
@@ -81,7 +81,5 @@ exports.watch = gulp.series(
   publishHtml,
   publishJavaScript,
   publishImages,
-  compileScss,
-  serve,
-  watchFiles
+  compileScss
 );
