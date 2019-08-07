@@ -3,7 +3,7 @@ $secondary-font: "Quicksand", sans-serif;
 $terciary-font: "Sofia", cursive;
 
 $primary-yellow: rgba(254, 181, 78, 0.8);
-$mocha-transparent: rgba(133, 125, 121, 0.85);
+$mocha-transparent: rgba(133, 125, 121, 0.95);
 $brown: rgb(83, 64, 49);
 $sand: #a37854;
 $box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.1);
@@ -426,7 +426,7 @@ div a {
 /* footer */
 
 footer {
-  line-height: 0.5;
+  line-height: 1;
   padding: 1px;
   padding-bottom: 1%;
 }
